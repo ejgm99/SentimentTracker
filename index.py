@@ -1,18 +1,17 @@
 from .models import InitialParser
-from apps.logic.model import NLP_Model
+from apps.nlp_core.Models.index import NLP_Model
 
 import en_core_web_sm
-from apps.deepmoji.index import DeepMoji
+from apps.nlp_core.Models.deepmoji import DeepMoji
 import spacy
 from spacy import displacy
 import json
 from apps.logic.model import ArticleParser
 
-from apps.deepmoji.index import DeepMoji
 d = DeepMoji()
 
 class InitialArticleParser(ArticleParser):
-    def initialize(self,parser = InitialParser):
+    def initialize(self, parser = InitialParser):
         super().initialize()
         self.d = d
         self.nlp = spacy.load("en_core_web_sm")
