@@ -6,7 +6,7 @@ from apps.nlp_core.Models.deepmoji import DeepMoji
 import spacy
 from spacy import displacy
 import json
-from apps.logic.model import ArticleParser
+from apps.nlp_core.Models.index import ArticleParser
 
 d = DeepMoji()
 
